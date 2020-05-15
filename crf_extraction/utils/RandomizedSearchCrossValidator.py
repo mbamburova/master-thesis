@@ -6,10 +6,10 @@ class RandomizedSearchCrossValidator:
     def __init__(self, estimator, param_distribution, scoring):
         self.estimator = estimator
         self.param_distribution = param_distribution
-        self.cv = 5,
-        self.verbose = 1,
-        self.n_jobs = -1,
-        self.n_iter = 50,
+        self.cv = 5
+        self.verbose = 1
+        self.n_jobs = -1
+        self.n_iter = 50
         self.scoring = scoring
 
     def get_validator(self):
