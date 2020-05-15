@@ -1,0 +1,11 @@
+pandas==1.0.3
+numpy==1.18.4
+matplotlib==3.2.1
+scipy==1.4.1
+scikit-learn==0.23.0
+joblib==0.15.0
+tensorflow==2.2.0
+tensorboard==2.2.1
+eli5==0.10.1
+sklearn-crfsuite==0.3.6
+seaborn==0.10.1
