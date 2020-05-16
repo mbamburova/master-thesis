@@ -1,5 +1,7 @@
 **Master thesis**
 -
+**Structured Information Extraction from Pharmaceutical Records**
+
 **Requirements**
 
 - [Jupyter notebook](https://jupyter.org/install.html)
