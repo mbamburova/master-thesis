@@ -14,7 +14,7 @@ PACK = 'PACK'
 STRENGTH = 'STRENGTH'
 UNDEFINED = 'O'
 
-MAH_BLACKLIST = ['krka', 'polfa', 'fresenius', 'stada', 'medana', 'sandoz', 'meda', 'panpharma',
+BLACKLIST = ['krka', 'polfa', 'fresenius', 'stada', 'medana', 'sandoz', 'meda', 'panpharma',
                  'sanitas', 'braun', 'sr', 'polpharma', 'nkc', 'teva', 'gsk', 'nycomed', 'ebewe',
                  'turbuhaler', 'flakone', 'užpildytame', 'švirkšte', 'lannacher', 'sopharma', 'hexal',
                  'licaformot', 'actavis', 'orion', 'medochemie', 'aurobindo', 'kabi', 'accord', 'hospira',
@@ -25,11 +25,11 @@ MAH_BLACKLIST = ['krka', 'polfa', 'fresenius', 'stada', 'medana', 'sandoz', 'med
                  'liconsa', 'alvogen', 'mylan', 'lek', 'ranbaxy', 'biopartners', 'sandoz', 'pfizer',
                  'gmbh', 'vaistažolių', 'mišinys', 'nuo', 'hemorojaus', 'smulkinti', 'valerijonų',
                  'šakniastiebiai', 'su', 'šaknimis', 'pensa', 'bluefish', 'teva', 'abece', 'aurobindo',
-                 'aristo', 'ebb', 'hameln', 'hexal', 'sachet', 'accord', '2care4', 'stada®', 'jubilant',
-                 'amneal', 'eql', 'glenmark', 'medartuum', 'astrazeneca', 'anpharm', 'takeda', 'amneal',
-                 'nordic', 'drugs', 'pharmadone', 'evolan', 'liconsa', 'medical', 'valley', 'arnet',
-                 'ardeapharma', 'eumedica', 'lyfjaver', 'europharma', 'europharmad', 'europharmadk',
-                 'paranova', 'chemvet', 'danmark']
+             'aristo', 'ebb', 'hameln', 'hexal', 'sachet', 'accord', '2care4', 'stada®', 'jubilant',
+             'amneal', 'eql', 'glenmark', 'medartuum', 'astrazeneca', 'anpharm', 'takeda', 'amneal',
+             'nordic', 'drugs', 'pharmadone', 'evolan', 'liconsa', 'medical', 'valley', 'arnet',
+             'ardeapharma', 'eumedica', 'lyfjaver', 'europharma', 'europharmad', 'europharmadk',
+             'paranova', 'chemvet', 'danmark']
 
 UNDEFINED_BLACKLIST = ['ampule', 'lahvicka', 'roztok', 'blist', 'blister', 'flakonas', 'sylinteriampullia',
                        'sylinteriampulli', 'flakon', 'ikke', 'angitt', '(', ')', '[', ']', ',', 'inhalaattori']
@@ -126,10 +126,10 @@ def label_column(row: tuple, header: str, datasource: str):
                     and (is_number(token) or token in STRENGTH_IN_NAME):
                 labelled_column.append((token, STRENGTH))
 
-            elif datasource == 'medic' and (label == NAME or label == PACK):
+            elif label == NAME or label == PACK:
                 label_medic_datasource(preprocessed_form, token, label, labelled_column)
 
-            elif label == NAME and (token in MAH_BLACKLIST or token in STRENGTH_IN_NAME):
+            elif label == NAME and (token in BLACKLIST or token in STRENGTH_IN_NAME):
                 labelled_column.append((token, UNDEFINED))
 
             else:
