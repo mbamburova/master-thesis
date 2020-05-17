@@ -41,7 +41,6 @@ def _generate_heatmap(matrix, fmt):
 
 def join_true_values_with_predicted(true_values, predicted_values):
     """
-
     :param true_values:
     :param predicted_values:
     :return: Joined true and predicted values in a form of dictionary.
