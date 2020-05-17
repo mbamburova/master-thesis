@@ -26,6 +26,7 @@
 * folder `data_preprocessor` contains:
 
     * `medic.csv` part of provided data used for experimental dataset
+    * `experimental_dataset.csv` created experimental dataset
     * `preprocessor.py` script for preprocessing of provided data
     * `data_preparation.ipynb` for creating of experimental dataset and dividing it into three parts - train, validation, test 
 
