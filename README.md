@@ -1,6 +1,6 @@
 **Master thesis**
 -
-**Structured Information Extraction from Pharmaceutical Records** ([archive FI MUNI](https://is.muni.cz/th/zieww/))
+**Structured Information Extraction from Pharmaceutical Records** ([archive FI MUNI](https://is.muni.cz/th/zieww/?lang=en))
 
 **Requirements**
 
